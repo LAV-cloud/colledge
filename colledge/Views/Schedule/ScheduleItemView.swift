@@ -1,0 +1,49 @@
+//
+//  ScheduleItemView.swift
+//  colledge
+//
+//  Created by Ромка Бережной on 17.03.2022.
+//
+
+import SwiftUI
+
+struct ScheduleItemView: View {
+    
+    var item: ScheduleItem
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundColor(.gray.opacity(0.2))
+            VStack(alignment: .leading, spacing: 0) {
+                HStack {
+                    Text("\(item.sort)")
+                        .foregroundColor(.secondary)
+                    Spacer()
+                    Text("\(item.time.getStart()) - \(item.time.getEnd())")
+                }
+                .padding(.vertical, 10)
+                .padding(.horizontal)
+                HStack {
+                    VStack(alignment:.leading, spacing: 0) {
+                        VStack(alignment: .leading, spacing: 0) {
+                            Text(item.subject.name)
+                                .foregroundColor(.primary)
+                                .font(.system(size: 20, weight: .bold, design: .rounded))
+                                .padding(.bottom, 5)
+                            Text(item.teacher.print)
+                                .foregroundColor(.secondary)
+                        }
+                        .padding(.bottom, 10)
+                        Text("Этаж \(item.classroom.floor) Каб. \(item.classroom.name)")
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(.bottom, 10)
+                    .padding(.horizontal)
+                    .multilineTextAlignment(.leading)
+                    Spacer()
+                }
+            }
+        }.frame(maxWidth: .infinity)
+    }
+}

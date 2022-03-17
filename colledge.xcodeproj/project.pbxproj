@@ -14,6 +14,21 @@
 		5FA5CAD027E0DCDD00F00FEA /* colledgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CACF27E0DCDD00F00FEA /* colledgeTests.swift */; };
 		5FA5CADA27E0DCDD00F00FEA /* colledgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CAD927E0DCDD00F00FEA /* colledgeUITests.swift */; };
 		5FA5CADC27E0DCDD00F00FEA /* colledgeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CADB27E0DCDD00F00FEA /* colledgeUITestsLaunchTests.swift */; };
+		5FA5CAEA27E19CBC00F00FEA /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CAE927E19CBC00F00FEA /* OnBoardingView.swift */; };
+		5FA5CAEF27E1B70A00F00FEA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CAEE27E1B70A00F00FEA /* API.swift */; };
+		5FA5CAF227E1B7E200F00FEA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5FA5CAF127E1B7E200F00FEA /* Alamofire */; };
+		5FA5CAF527E20ADF00F00FEA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CAF427E20ADF00F00FEA /* MainView.swift */; };
+		5FA5CAF727E215EB00F00FEA /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CAF627E215EB00F00FEA /* FavoriteView.swift */; };
+		5FA5CAF927E2161300F00FEA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CAF827E2161300F00FEA /* SearchView.swift */; };
+		5FA5CAFB27E2163000F00FEA /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CAFA27E2163000F00FEA /* InformationView.swift */; };
+		5FA5CAFD27E2164C00F00FEA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CAFC27E2164C00F00FEA /* ProfileView.swift */; };
+		5FA5CAFF27E2C82B00F00FEA /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CAFE27E2C82B00F00FEA /* ScheduleView.swift */; };
+		5FA5CB3727E3332500F00FEA /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CB3627E3332500F00FEA /* Storage.swift */; };
+		5FA5CB3A27E34E4D00F00FEA /* ScheduleAdditionally.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CB3927E34E4D00F00FEA /* ScheduleAdditionally.swift */; };
+		5FA5CB3C27E34F8000F00FEA /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CB3B27E34F8000F00FEA /* ScheduleList.swift */; };
+		5FA5CB3E27E34F9900F00FEA /* SheduleDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CB3D27E34F9900F00FEA /* SheduleDay.swift */; };
+		5FA5CB4027E34FB100F00FEA /* ScheduleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CB3F27E34FB100F00FEA /* ScheduleItemView.swift */; };
+		5FA5CB4227E34FEE00F00FEA /* ScheduleDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CB4127E34FEE00F00FEA /* ScheduleDays.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +59,21 @@
 		5FA5CAD527E0DCDD00F00FEA /* colledgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = colledgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA5CAD927E0DCDD00F00FEA /* colledgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colledgeUITests.swift; sourceTree = "<group>"; };
 		5FA5CADB27E0DCDD00F00FEA /* colledgeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colledgeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5FA5CAE927E19CBC00F00FEA /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		5FA5CAEE27E1B70A00F00FEA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5FA5CAF327E1D23000F00FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5FA5CAF427E20ADF00F00FEA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5FA5CAF627E215EB00F00FEA /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		5FA5CAF827E2161300F00FEA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		5FA5CAFA27E2163000F00FEA /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		5FA5CAFC27E2164C00F00FEA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5FA5CAFE27E2C82B00F00FEA /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		5FA5CB3627E3332500F00FEA /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		5FA5CB3927E34E4D00F00FEA /* ScheduleAdditionally.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAdditionally.swift; sourceTree = "<group>"; };
+		5FA5CB3B27E34F8000F00FEA /* ScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
+		5FA5CB3D27E34F9900F00FEA /* SheduleDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleDay.swift; sourceTree = "<group>"; };
+		5FA5CB3F27E34FB100F00FEA /* ScheduleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItemView.swift; sourceTree = "<group>"; };
+		5FA5CB4127E34FEE00F00FEA /* ScheduleDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDays.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FA5CAF227E1B7E200F00FEA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +125,9 @@
 		5FA5CABD27E0DCDC00F00FEA /* colledge */ = {
 			isa = PBXGroup;
 			children = (
+				5FA5CAF327E1D23000F00FEA /* Info.plist */,
+				5FA5CAEB27E1A07A00F00FEA /* Common */,
+				5FA5CAE827E19CAB00F00FEA /* Views */,
 				5FA5CABE27E0DCDC00F00FEA /* colledgeApp.swift */,
 				5FA5CAC027E0DCDC00F00FEA /* ContentView.swift */,
 				5FA5CAC227E0DCDD00F00FEA /* Assets.xcassets */,
@@ -127,6 +161,42 @@
 			path = colledgeUITests;
 			sourceTree = "<group>";
 		};
+		5FA5CAE827E19CAB00F00FEA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5FA5CB3827E34E3300F00FEA /* Schedule */,
+				5FA5CAE927E19CBC00F00FEA /* OnBoardingView.swift */,
+				5FA5CAF427E20ADF00F00FEA /* MainView.swift */,
+				5FA5CAFC27E2164C00F00FEA /* ProfileView.swift */,
+				5FA5CAFA27E2163000F00FEA /* InformationView.swift */,
+				5FA5CAF827E2161300F00FEA /* SearchView.swift */,
+				5FA5CAF627E215EB00F00FEA /* FavoriteView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5FA5CAEB27E1A07A00F00FEA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5FA5CAEE27E1B70A00F00FEA /* API.swift */,
+				5FA5CB3627E3332500F00FEA /* Storage.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5FA5CB3827E34E3300F00FEA /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				5FA5CAFE27E2C82B00F00FEA /* ScheduleView.swift */,
+				5FA5CB3927E34E4D00F00FEA /* ScheduleAdditionally.swift */,
+				5FA5CB3B27E34F8000F00FEA /* ScheduleList.swift */,
+				5FA5CB3D27E34F9900F00FEA /* SheduleDay.swift */,
+				5FA5CB3F27E34FB100F00FEA /* ScheduleItemView.swift */,
+				5FA5CB4127E34FEE00F00FEA /* ScheduleDays.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +213,9 @@
 			dependencies = (
 			);
 			name = colledge;
+			packageProductDependencies = (
+				5FA5CAF127E1B7E200F00FEA /* Alamofire */,
+			);
 			productName = colledge;
 			productReference = 5FA5CABB27E0DCDC00F00FEA /* colledge.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +288,9 @@
 				Base,
 			);
 			mainGroup = 5FA5CAB227E0DCDC00F00FEA;
+			packageReferences = (
+				5FA5CAF027E1B7E200F00FEA /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 5FA5CABC27E0DCDC00F00FEA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +333,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FA5CAEA27E19CBC00F00FEA /* OnBoardingView.swift in Sources */,
+				5FA5CB3727E3332500F00FEA /* Storage.swift in Sources */,
+				5FA5CAFD27E2164C00F00FEA /* ProfileView.swift in Sources */,
+				5FA5CAFB27E2163000F00FEA /* InformationView.swift in Sources */,
 				5FA5CAC127E0DCDC00F00FEA /* ContentView.swift in Sources */,
+				5FA5CAEF27E1B70A00F00FEA /* API.swift in Sources */,
+				5FA5CB4027E34FB100F00FEA /* ScheduleItemView.swift in Sources */,
+				5FA5CAFF27E2C82B00F00FEA /* ScheduleView.swift in Sources */,
+				5FA5CAF927E2161300F00FEA /* SearchView.swift in Sources */,
+				5FA5CB3A27E34E4D00F00FEA /* ScheduleAdditionally.swift in Sources */,
+				5FA5CAF527E20ADF00F00FEA /* MainView.swift in Sources */,
+				5FA5CB4227E34FEE00F00FEA /* ScheduleDays.swift in Sources */,
+				5FA5CAF727E215EB00F00FEA /* FavoriteView.swift in Sources */,
+				5FA5CB3E27E34F9900F00FEA /* SheduleDay.swift in Sources */,
 				5FA5CABF27E0DCDC00F00FEA /* colledgeApp.swift in Sources */,
+				5FA5CB3C27E34F8000F00FEA /* ScheduleList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +510,7 @@
 				DEVELOPMENT_TEAM = J3WRB547W6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = colledge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +540,7 @@
 				DEVELOPMENT_TEAM = J3WRB547W6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = colledge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -583,6 +675,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5FA5CAF027E1B7E200F00FEA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5FA5CAF127E1B7E200F00FEA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FA5CAF027E1B7E200F00FEA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5FA5CAB327E0DCDC00F00FEA /* Project object */;
 }
