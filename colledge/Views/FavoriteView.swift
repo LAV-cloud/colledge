@@ -94,7 +94,7 @@ struct FavoriteView: View {
             .navigationBarTitleDisplayMode(.large)
         }
         .onAppear(perform: {
-            if !schedule.isEmpty && main == nil {
+            if !schedule.isEmpty {
                 storage.load(sourceData: schedule) { (result: Schedule?) in
                     guard let result = result else {
                         self.error = true

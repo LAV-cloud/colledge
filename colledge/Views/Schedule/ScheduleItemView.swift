@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScheduleItemView: View {
     
+    var schedule: Schedule
     var item: ScheduleItem
     
     var body: some View {
@@ -31,8 +32,13 @@ struct ScheduleItemView: View {
                                 .foregroundColor(.primary)
                                 .font(.system(size: 20, weight: .bold, design: .rounded))
                                 .padding(.bottom, 5)
-                            Text(item.teacher.print)
-                                .foregroundColor(.secondary)
+                            if schedule.type == .student {
+                                Text(item.teacher.print)
+                                    .foregroundColor(.secondary)
+                            } else {
+                                Text(item.group.print)
+                                    .foregroundColor(.secondary)
+                            }
                         }
                         .padding(.bottom, 10)
                         Text("Этаж \(item.classroom.floor) Каб. \(item.classroom.name)")

@@ -16,6 +16,8 @@ struct SearchView: View {
     @State private var groupData: [Group] = []
     @State private var teacherData: [Teacher] = []
     
+    @FocusState private var fieldFocus: FieldFocusState?
+    
     @Binding var schedule: Data
     @Binding var schedules: Data
     
@@ -46,18 +48,29 @@ struct SearchView: View {
                 }
                 .pickerStyle(.segmented)
                 HStack {
-                    TextField("Поиск группы или преподавателя", text: $search)
-                        .foregroundColor(.primary)
-                        .padding(10)
-                        .background(.gray.opacity(0.2))
-                        .cornerRadius(8)
-                    Button(action: {
-                        self.search = ""
-                    }, label: {
-                        Image(systemName: "xmark.circle.fill")
-                            .foregroundColor(.secondary)
-                    })
+                    HStack {
+                        TextField("Поиск группы или преподавателя", text: $search)
+                            .foregroundColor(.primary)
+                            .focused($fieldFocus, equals: FieldFocusState.search)
+                        Button(action: {
+                            self.search = ""
+                        }, label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .foregroundColor(.secondary)
+                        })
+                    }
+                    .padding(10)
+                    .background(.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    if self.fieldFocus == .search {
+                        Button(action: {
+                            self.fieldFocus = nil
+                        }, label: {
+                            Text("Отмена")
+                        })
+                    }
                 }
+                .animation(.spring(), value: fieldFocus)
                 .padding(.vertical, 20)
                 if groupData.count == 0 && teacherData.count == 0 {
                     Spacer()
@@ -78,35 +91,38 @@ struct SearchView: View {
                 }
             }
             .onAppear(perform: {
-                storage.load(sourceData: schedule) { (result: Schedule?) in
-                    guard let result = result else {
-                        return
-                    }
-                    self.main = result
-                }
-                
-                storage.load(sourceData: schedules) { (result: [Schedule]?) in
-                    guard let result = result else {
-                        return
-                    }
-                    self.favorites = result
-                }
-                
-//                if type == .teacher {
-                    api.getTeachers { result in
+                if !schedule.isEmpty {
+                    storage.load(sourceData: schedule) { (result: Schedule?) in
                         guard let result = result else {
                             return
                         }
-                        self.teacherData = result
+                        self.main = result
                     }
-//                } else {
-                    api.getGroups { result in
+                }
+                
+                if !schedules.isEmpty {
+                    storage.load(sourceData: schedules) { (result: [Schedule]?) in
                         guard let result = result else {
                             return
                         }
-                        self.groupData = result
+                        self.favorites = result
                     }
-//                }
+                }
+                
+                api.getTeachers { result in
+                    guard let result = result else {
+                        return
+                    }
+                    self.teacherData = result
+                }
+                
+                api.getGroups { result in
+                    guard let result = result else {
+                        return
+                    }
+                    self.groupData = result
+                }
+                //                }
             })
             .padding(.horizontal)
             .navigationTitle("Поиск")
@@ -194,4 +210,8 @@ struct SearchGroupItem: View {
                             .cornerRadius(8)
                         })
     }
+}
+
+enum FieldFocusState {
+    case search
 }

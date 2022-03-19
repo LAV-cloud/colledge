@@ -10,7 +10,7 @@ import SwiftUI
 struct OnBoardingView: View {
     
     @State private var state: OnBoardingState = .first
-    @State private var type: ScheduleType = .none
+    @State private var type: ScheduleType? = nil
     @State private var selectedSchedule: Schedule? = nil
     
     @Binding var schedule: Data
@@ -74,13 +74,13 @@ struct OnBoardingView: View {
                         self.state = .third
                     }, label: {
                         Text("Далее")
-                            .foregroundColor(self.type == .none ? .secondary :.white)
+                            .foregroundColor(self.type == nil ? .secondary :.white)
                             .padding(10)
                             .padding(.horizontal)
-                            .background(self.type == .none ? Color.gray.opacity(0.4) : Color.blue)
+                            .background(self.type == nil ? Color.gray.opacity(0.4) : Color.blue)
                             .cornerRadius(8)
                     })
-                    .disabled(self.type == .none)
+                    .disabled(self.type == nil)
                 case .third:
                     Button(action: {
                         self.state = .second
@@ -132,16 +132,13 @@ struct OnBoardingFirstView: View {
 
 struct OnBoardingSecondView: View {
     @Binding var state: OnBoardingState
-    @Binding var type: ScheduleType
+    @Binding var type: ScheduleType?
     var body: some View {
         VStack {
             VStack {
-                Text("Выберите")
+                Text("Выберите кто вы")
                     .font(.title2)
                     .foregroundColor(.secondary)
-                Text("Кто вы?")
-                    .foregroundColor(.primary)
-                    .font(.title)
                 HStack {
                     Button(action: {
                         self.type = .teacher
@@ -173,7 +170,7 @@ struct OnBoardingSecondView: View {
 
 struct OnBoardingThirdView: View {
     
-    var type: ScheduleType
+    var type: ScheduleType?
     var state: OnBoardingState
     
     @State var teachers: [Teacher] = []
@@ -202,7 +199,7 @@ struct OnBoardingThirdView: View {
                     ScrollView {
                         ForEach(teachers, id:\.id) { teacher in
                             Button(action: {
-                                self.selectedSchedule = Schedule(id: teacher.id, name: teacher.print, type: self.type)
+                                self.selectedSchedule = Schedule(id: teacher.id, name: teacher.print, type: self.type!)
                             }, label: {
                                 Text(teacher.print)
                                     .foregroundColor(.white)
@@ -222,7 +219,7 @@ struct OnBoardingThirdView: View {
                     ScrollView {
                         ForEach(groups, id:\.id) { group in
                             Button(action: {
-                                self.selectedSchedule = Schedule(id: group.id, name: group.print, type: self.type)
+                                self.selectedSchedule = Schedule(id: group.id, name: group.print, type: self.type!)
                             }, label: {
                                 Text(group.print)
                                     .foregroundColor(.white)
@@ -272,7 +269,7 @@ enum OnBoardingState: Int {
 }
 
 enum ScheduleType: Int, Codable {
-    case teacher = 1, student = 2, none = 3
+    case teacher = 1, student = 2
 }
 
 struct Schedule: Codable {

@@ -20,7 +20,7 @@ struct MainView: View {
             FavoriteView(schedules: $favorites, schedule: $schedule).tabItem({ Image(systemName: "calendar") }).tag(0)
             SearchView(schedule: $schedule, schedules: $favorites).tabItem({ Image(systemName: "magnifyingglass") }).tag(1)
             InformationView().tabItem({ Image(systemName: "clock") }).tag(2)
-            ProfileView().tabItem({ Image(systemName: "person.fill") }).tag(3)
+            ProfileView(schedule: $schedule).tabItem({ Image(systemName: "person.fill") }).tag(3)
         }
     }
 }

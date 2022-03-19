@@ -9,12 +9,15 @@ import SwiftUI
 
 struct ScheduleList: View {
     
+    var schedule: Schedule
     var items: [ScheduleItem]
     
     var body: some View {
         ForEach(items, id:\.id) { item in
-            ScheduleItemView(item: item)
-            ScheduleAdditionally(item: item, items: items)
+            VStack {
+                ScheduleItemView(schedule: schedule, item: item)
+                ScheduleAdditionally(item: item, items: items)
+            }
         }
     }
 }
