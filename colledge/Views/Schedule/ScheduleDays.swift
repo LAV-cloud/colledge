@@ -13,6 +13,7 @@ struct ScheduleDays: View {
     var today: Day?
     
     @Binding var selectedDay: Day?
+    @Binding var currentIndex: Int
     
     var body: some View {
         HStack {
@@ -28,7 +29,7 @@ struct ScheduleDays: View {
                             .frame(width: 10, height: 10)
                             .padding(.bottom, 5)
                     }
-                    ScheduleDay(selectedDay: $selectedDay, day: day, count: days.count)
+                    ScheduleDay(selectedDay: $selectedDay, currentIndex: $currentIndex, day: day, count: days.count)
                 }
                 .animation(.spring(), value: selectedDay?.idOfWeek)
             }

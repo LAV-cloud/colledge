@@ -45,12 +45,16 @@ struct SelectMainSchedule: View {
                                     self.newMain = schedule
                                 }
                             }, label: {
-                                Text(teacher.print)
-                                    .foregroundColor(.primary)
-                                    .padding(.vertical, 15)
-                                    .frame(maxWidth: .infinity)
-                                    .background(teacher.id == newMain?.id ? Color.blue : (teacher.id == main?.id ? .gray.opacity(0.4) : .gray.opacity(0.2)))
-                                    .cornerRadius(4)
+                                HStack {
+                                    Text(teacher.print)
+                                    Spacer()
+                                }
+                                .padding(.horizontal)
+                                .foregroundColor(.primary)
+                                .padding(.vertical, 15)
+                                .frame(maxWidth: .infinity)
+                                .background(teacher.id == newMain?.id ? Color.blue : (teacher.id == main?.id ? .gray.opacity(0.4) : .gray.opacity(0.2)))
+                                .cornerRadius(4)
                             })
                         }
                     } else {
@@ -61,12 +65,16 @@ struct SelectMainSchedule: View {
                                     self.newMain = schedule
                                 }
                             }, label: {
-                                Text(group.print)
-                                    .foregroundColor(.primary)
-                                    .padding(.vertical, 15)
-                                    .frame(maxWidth: .infinity)
-                                    .background(group.id == newMain?.id ? Color.blue : (group.id == main?.id ? .gray.opacity(0.4) : .gray.opacity(0.2)))
-                                    .cornerRadius(4)
+                                HStack {
+                                    Text(group.print)
+                                    Spacer()
+                                }
+                                .padding(.horizontal)
+                                .foregroundColor(.primary)
+                                .padding(.vertical, 15)
+                                .frame(maxWidth: .infinity)
+                                .background(group.id == newMain?.id ? Color.blue : (group.id == main?.id ? .gray.opacity(0.4) : .gray.opacity(0.2)))
+                                .cornerRadius(4)
                             })
                         }
                     }
@@ -81,11 +89,12 @@ struct SelectMainSchedule: View {
                 }, label: {
                     Text("Выбрать")
                         .foregroundColor(newMain?.id == main?.id || newMain == nil ? .secondary :.white)
-                        .padding(10)
-                        .padding(.horizontal)
+                        .frame(height: 60)
+                        .frame(maxWidth: .infinity)
                         .background(newMain?.id == main?.id || newMain == nil ? Color.gray.opacity(0.4) : Color.blue)
                         .cornerRadius(8)
                 })
+                .padding(.top)
                 .padding(.bottom)
                 .disabled(newMain?.id == main?.id || newMain == nil)
             }
@@ -95,6 +104,7 @@ struct SelectMainSchedule: View {
         .padding(.horizontal)
         .onAppear(perform: {
             self.loading = true
+            if main != nil { self.type = main!.type }
             api.getTeachers { result in
                 guard let result = result else {
                     self.error = true

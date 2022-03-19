@@ -29,7 +29,7 @@
 		5FA5CB3E27E34F9900F00FEA /* SheduleDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CB3D27E34F9900F00FEA /* SheduleDay.swift */; };
 		5FA5CB4027E34FB100F00FEA /* ScheduleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CB3F27E34FB100F00FEA /* ScheduleItemView.swift */; };
 		5FA5CB4227E34FEE00F00FEA /* ScheduleDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA5CB4127E34FEE00F00FEA /* ScheduleDays.swift */; };
-		5FBC627127E56BBA00382B05 /* ScrollableTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBC627027E56BBA00382B05 /* ScrollableTabView.swift */; };
+		5FBC627127E56BBA00382B05 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBC627027E56BBA00382B05 /* CarouselView.swift */; };
 		5FBC627327E575DD00382B05 /* SchedulePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBC627227E575DC00382B05 /* SchedulePage.swift */; };
 		5FBC627527E6189800382B05 /* SelectMainSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBC627427E6189800382B05 /* SelectMainSchedule.swift */; };
 /* End PBXBuildFile section */
@@ -77,7 +77,7 @@
 		5FA5CB3D27E34F9900F00FEA /* SheduleDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleDay.swift; sourceTree = "<group>"; };
 		5FA5CB3F27E34FB100F00FEA /* ScheduleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItemView.swift; sourceTree = "<group>"; };
 		5FA5CB4127E34FEE00F00FEA /* ScheduleDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDays.swift; sourceTree = "<group>"; };
-		5FBC627027E56BBA00382B05 /* ScrollableTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableTabView.swift; sourceTree = "<group>"; };
+		5FBC627027E56BBA00382B05 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		5FBC627227E575DC00382B05 /* SchedulePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePage.swift; sourceTree = "<group>"; };
 		5FBC627427E6189800382B05 /* SelectMainSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMainSchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,7 +187,7 @@
 			children = (
 				5FA5CAEE27E1B70A00F00FEA /* API.swift */,
 				5FA5CB3627E3332500F00FEA /* Storage.swift */,
-				5FBC627027E56BBA00382B05 /* ScrollableTabView.swift */,
+				5FBC627027E56BBA00382B05 /* CarouselView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -357,7 +357,7 @@
 				5FBC627327E575DD00382B05 /* SchedulePage.swift in Sources */,
 				5FA5CB4227E34FEE00F00FEA /* ScheduleDays.swift in Sources */,
 				5FA5CAF727E215EB00F00FEA /* FavoriteView.swift in Sources */,
-				5FBC627127E56BBA00382B05 /* ScrollableTabView.swift in Sources */,
+				5FBC627127E56BBA00382B05 /* CarouselView.swift in Sources */,
 				5FA5CB3E27E34F9900F00FEA /* SheduleDay.swift in Sources */,
 				5FA5CABF27E0DCDC00F00FEA /* colledgeApp.swift in Sources */,
 				5FA5CB3C27E34F8000F00FEA /* ScheduleList.swift in Sources */,

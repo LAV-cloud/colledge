@@ -15,6 +15,7 @@ struct ScheduleView: View {
     @State private var scheduleItems: [[ScheduleItem]] = []
     @State private var error: Bool = false
     @State private var loading: Bool = false
+    @State private var currentIndex: Int = 0
     
     var schedule: Schedule
     var main: Schedule?
@@ -27,15 +28,29 @@ struct ScheduleView: View {
             ScheduleDays(
                 days: days,
                 today: today,
-                selectedDay: $selectedDay
+                selectedDay: $selectedDay,
+                currentIndex: $currentIndex
             )
-            SchedulePage(
-                loading: loading,
-                error: error,
-                selectedDay: selectedDay,
-                scheduleItems: scheduleItems,
-                schedule: schedule
-            )
+            GeometryReader { geometry in
+                CarouselView(
+                    numberOfImages: days.count,
+                    offset: 20,
+                    days: $days,
+                    selectedDay: $selectedDay,
+                    currentIndex: $currentIndex
+                ) {
+                    ForEach(0..<days.count, id:\.self) { index in
+                        SchedulePage(
+                            loading: loading,
+                            error: error,
+                            selectedDay: days[index],
+                            scheduleItems: scheduleItems,
+                            schedule: schedule
+                        )
+                        .frame(width: geometry.frame(in: .global).width)
+                    }
+                }
+            }
         }
         .navigationTitle(schedule.name)
         .toolbar {
@@ -77,6 +92,7 @@ struct ScheduleView: View {
                     
                     self.today = nowDay
                     self.selectedDay = nowDay
+                    self.currentIndex = selectedDay!.idOfWeek - 1
                     
                     formatter.dateFormat = "y"
                     let year = Int(formatter.string(from: today))!
@@ -159,6 +175,7 @@ struct ScheduleView: View {
             
             self.today = nowDay
             self.selectedDay = nowDay
+            self.currentIndex = selectedDay!.idOfWeek - 1
             
             formatter.dateFormat = "y"
             let year = Int(formatter.string(from: today))!

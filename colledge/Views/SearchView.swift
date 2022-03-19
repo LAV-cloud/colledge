@@ -15,6 +15,8 @@ struct SearchView: View {
     @State private var type: ScheduleType = .teacher
     @State private var groupData: [Group] = []
     @State private var teacherData: [Teacher] = []
+    @State private var loading: Bool = false
+    @State private var error: Bool = false
     
     @FocusState private var fieldFocus: FieldFocusState?
     
@@ -122,7 +124,6 @@ struct SearchView: View {
                     }
                     self.groupData = result
                 }
-                //                }
             })
             .padding(.horizontal)
             .navigationTitle("Поиск")

@@ -10,6 +10,7 @@ import SwiftUI
 struct ScheduleDay: View {
     
     @Binding var selectedDay: Day?
+    @Binding var currentIndex: Int
     
     var day: Day
     var count: Int
@@ -17,6 +18,7 @@ struct ScheduleDay: View {
     var body: some View {
         Button(action: {
             self.selectedDay = day
+            self.currentIndex = selectedDay!.idOfWeek - 1
         }, label: {
             ZStack {
                 Circle()

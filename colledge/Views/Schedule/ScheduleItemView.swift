@@ -18,8 +18,18 @@ struct ScheduleItemView: View {
                 .foregroundColor(.gray.opacity(0.2))
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
-                    Text("\(item.sort)")
-                        .foregroundColor(.secondary)
+                    HStack {
+                        ZStack(alignment: .center) {
+                            Circle()
+                                .foregroundColor(.gray.opacity(0.2))
+                            Text("\(item.sort)")
+                                .foregroundColor(.secondary)
+                        }
+                        .frame(width: 24, height: 24)
+                        Text("Пара")
+                            .foregroundColor(.secondary)
+                        Spacer()
+                    }
                     Spacer()
                     Text("\(item.time.getStart()) - \(item.time.getEnd())")
                 }
