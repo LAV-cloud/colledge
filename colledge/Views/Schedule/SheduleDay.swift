@@ -22,13 +22,13 @@ struct ScheduleDay: View {
         }, label: {
             ZStack {
                 Circle()
-                    .foregroundColor(selectedDay?.value == day.value ? .accentColor : .gray.opacity(0.2))
+                    .foregroundColor(selectedDay?.idOfWeek == day.idOfWeek ? .accentColor : .gray.opacity(0.2))
                 VStack {
                     Text(day.name)
                     Text(day.value)
                 }
                 .font(.system(size: 12, weight: .regular, design: .default))
-                .foregroundColor(selectedDay?.value == day.value ? .white : .primary)
+                .foregroundColor(selectedDay?.idOfWeek == day.idOfWeek ? .white : .primary)
             }
             .frame(
                 width: UIScreen.main.bounds.width / CGFloat(count + 2),

@@ -88,7 +88,7 @@ struct ScheduleView: View {
                     formatter.dateFormat = "d"
                     nowDay.value = formatter.string(from: today)
                     
-                    nowDay.idOfWeek = dayOfWeek - 1
+                    nowDay.idOfWeek = dayOfWeek == 1 ? dayOfWeek : dayOfWeek - 1
                     
                     self.today = nowDay
                     self.selectedDay = nowDay
@@ -141,7 +141,7 @@ struct ScheduleView: View {
         .onAppear(perform: {
             self.loading = true
             let calendar = Calendar.current
-            let today = calendar.startOfDay(for: Date())
+            var today = calendar.startOfDay(for: Date())
             let dayOfWeek = calendar.component(.weekday, from: today)
             let weekdays = calendar.range(of: .weekday, in: .weekOfYear, for: today)!
             let days = (weekdays.lowerBound + 1 ..< weekdays.upperBound)
@@ -171,7 +171,7 @@ struct ScheduleView: View {
             formatter.dateFormat = "d"
             nowDay.value = formatter.string(from: today)
             
-            nowDay.idOfWeek = dayOfWeek - 1
+            nowDay.idOfWeek = dayOfWeek == 1 ? dayOfWeek : dayOfWeek - 1
             
             self.today = nowDay
             self.selectedDay = nowDay
@@ -183,7 +183,7 @@ struct ScheduleView: View {
             formatter.dateFormat = "w"
             let week = Int(formatter.string(from: today))!
             
-            api.getSchedule(year: year, week: dayOfWeek == 1 ? week + 1 : week, type: schedule.type, id: schedule.id) { result in
+            api.getSchedule(year: year, week: dayOfWeek == 1 ? week - 1 : week - 2, type: schedule.type, id: schedule.id) { result in
                 guard let result = result else {
                     self.error = true
                     return

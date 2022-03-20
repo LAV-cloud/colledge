@@ -95,8 +95,18 @@ struct SelectMainSchedule: View {
                         .cornerRadius(8)
                 })
                 .padding(.top)
-                .padding(.bottom)
                 .disabled(newMain?.id == main?.id || newMain == nil)
+                Button(action: {
+                    self.select = false
+                }, label: {
+                    Text("Отмена")
+                        .foregroundColor(.white)
+                        .frame(height: 60)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.gray.opacity(0.4))
+                        .cornerRadius(8)
+                })
+                .padding(.bottom)
             }
         }
         .navigationTitle("Выбор")
